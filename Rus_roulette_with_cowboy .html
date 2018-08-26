@@ -1,0 +1,62 @@
+<meta charset="utf-8">
+<script>
+
+
+//The program is a game of Russian roulette with a virtual cowboy.
+// If you agree to try fate, then started from you you and a cowboy do a shot at yourself.
+// At the end of each round the cowboy offers one more. 
+//After 6-yh even a crazy cowboy will give up his nerves.
+// However, will you still alive to see this?
+
+alert ('Playing "Russian Roulette" (with a cowboy).');
+var name = prompt("Hello what is your name?");
+
+while((name == '') || (name == 'null')){
+	name = prompt('Do not be afraid, say your name!');
+}
+
+alert ("Hello, "+ name + ' !  My name is Bill. Let us play in "Russian roulette", if you are certainly not a coward.');
+var ask = prompt('Click Z - if agree.');
+
+if ((ask == 'Z') || (ask =='z' )){
+
+	var n = 0;// number of rounds
+	do{
+		n++;
+		if ((Math.random() * 6) < 1){
+			alert('Booom!');
+			alert(name+', your song is sung. You did not afraid, but you were not lucky.');
+			break;
+		}
+		else if((Math.random() * 6) < 1){
+			alert('Click! Lucky you. And now I.');
+			alert('Booom!');
+			alert('Bill went to the forefathers. Are you happy, killer?!');
+			break;
+		}
+		
+		else{
+			var x = 0;// responsible for the continuation of the cycle
+			alert('Click! Lucky you. And now I. Click.');
+			alert('Rounds between you and me are played: ' +n);
+			if (n < 6){
+			x = prompt('Maybe one more time? If you agree - press Z');
+			}
+			else{
+				alert('You do not have fear, ' +name+'.  '+n+' times enough. Enough to test fate.');
+
+			}
+	
+		}
+		
+	}while ((x == 'Z') || (x =='z' ));
+
+	alert('Total rounds played: ' + n);
+
+} 
+
+else{
+	alert('You are a coward. I knew it.')
+}
+
+</script>
