@@ -1,7 +1,7 @@
 # Russian_roulette
 Playing "Russian Roulette" (with a cowboy).
 
-// Actually this Game wrote in JavaScript script in HTML
+# Actually this Game wrote in JavaScript script in HTML
 
 // The program is a game of Russian roulette with a virtual cowboy.
 // If you agree to try fate, then started from you you and a cowboy do a shot at yourself.
